@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="天地图" />
+    <title>仁怀市高粱种植面积展示</title>
+    <script type="text/javascript"
+        src="http://api.tianditu.gov.cn/api?v=4.0&tk=9e1193ba25c737e220a183724c1ecbf6"></script>
+    <style type="text/css">
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "Microsoft YaHei"
+        }
+
+        #mapDiv {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 16.66%;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #e0e0e0;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar li:hover {
+            background-color: #d0d0d0;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+            /* 内容区域占据剩余空间 */
+            padding: 20px;
+
+        }
+    </style>
+
+
+
+    </script>
+</head>
+
+<body onLoad="onLoad()">
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>选择查看种植面积</h2>
+            <ul>
+                <li id="ALL" data-location="106.409156,28.101033">整体种植面积</li>
+                <li id="HSG1" data-location="106.40176,28.09979">火石岗镇</li>
+                <li id="LJ1" data-location=" 106.089295,27.733300">龙井镇</li>
+                <li id="SH1" data-location="106.340136,28.074671">三合镇</li>
+                <li id="MT1" data-location="106.376820,27.828182">茅台镇</li>
+                <li id="CG1" data-location=" 106.433348,27.665410">长岗镇</li>
+                <li id="WM1" data-location="106.251068,27.644759">五马镇</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div id="mapDiv"></div>
+        </div>
+    </div>
+
+    <script src="坐标.js"></script>
+
+</body>
+
+</html>
